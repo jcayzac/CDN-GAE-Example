@@ -1,0 +1,9 @@
+*.swp
+*.swo
+*.pyc
+*~
+.DS_Store
+*.min.css
+*.min.js
+*.min.png
+
