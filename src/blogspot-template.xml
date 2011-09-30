@@ -123,7 +123,7 @@
 												<div class="post-footer-line post-footer-line-1">
 													<b:if cond='data:top.showAuthor'><span class='post-author vcard'><span class='fn'><data:post.author/></span></span></b:if>
 													<b:if cond='data:top.showTimestamp'><b:if cond='data:post.url'><a class='post-timestamp timestamp-link' expr:href='data:post.url' rel='bookmark' title='permanent link'><abbr class='published' expr:title='data:post.timestampISO8601'><data:post.timestamp/></abbr></a></b:if></b:if>
-													<b:if cond='data:blog.pageType != &quot;item&quot;'><b:if cond='data:blog.pageType != &quot;static_page&quot;'><b:if cond='data:post.allowComments'><a class='post-comment-link comment-link' expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'><data:post.numComments/></a></b:if></b:if></b:if>
+													<b:if cond='data:blog.pageType != &quot;item&quot;'><b:if cond='data:blog.pageType != &quot;static_page&quot;'><b:if cond='data:post.allowComments'><a class='post-comment-link comment-link' expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick' expr:data-comment-count='data:post.numComments'><data:post.numComments/></a></b:if></b:if></b:if>
 													<b:if cond='data:post.sharePostUrl'>
 														<section class='post-share-buttons goog-inline-block'>
 															<b:include data='post' name='shareButtons'/>
@@ -263,7 +263,7 @@
 									<b:includable id='comments' var='post'>
 										<section class='comments' id='comments'>
 											<b:if cond='data:post.allowComments'>
-												<h1 class="comments-prefix"><data:post.numComments/></h1>
+												<h1 class="comments-prefix" expr:data-comment-count='data:post.numComments'><data:post.numComments/></h1>
 												<b:if cond='data:post.commentPagingRequired'>
 													<nav class='paging-control-container'>
 														<a expr:class='data:post.oldLinkClass' expr:href='data:post.oldestLinkUrl'><data:post.oldestLinkText/></a>
@@ -302,19 +302,17 @@
 														</b:loop>
 													</dl>
 												</div>
-												<b:if cond='data:post.commentPagingRequired'>
-													<p class='comment-footer'>
-														<b:if cond='data:post.embedCommentForm'>
-															<b:if cond='data:post.allowNewComments'>
-																<b:include data='post' name='comment-form'/>
-																<b:else/>
-																<data:post.noNewCommentsText/>
-															</b:if>
+												<p class='comment-footer'>
+													<b:if cond='data:post.embedCommentForm'>
+														<b:if cond='data:post.allowNewComments'>
+															<b:include data='post' name='comment-form'/>
 															<b:else/>
-															<a expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'><data:postCommentMsg/></a>
+															<data:post.noNewCommentsText/>
 														</b:if>
-													</p>
-												</b:if>
+													<b:else/>
+														<a expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'><data:postCommentMsg/></a>
+													</b:if>
+												</p>
 												<b:if cond='data:showCmtPopup'>
 													<div id='comment-popup'>
 														<iframe allowtransparency='true' frameborder='0' id='comment-actions' name='comment-actions' scrolling='no'>
@@ -362,7 +360,7 @@
 							<b:widget id='BlogArchive1' locked='false' title='Blog Archive' type='BlogArchive'>
 								<b:includable id='main'>
 									<b:if cond='data:title'>
-										<h2><data:title/></h2>
+										<h1><data:title/></h1>
 									</b:if>
 									<div class='widget-content'>
 										<div id='ArchiveList'>
@@ -457,7 +455,7 @@
 
 							<b:widget id='PopularPosts1' locked='false' title='Popular Posts' type='PopularPosts'>
 								<b:includable id='main'>
-									<b:if cond='data:title'><h2><data:title/></h2></b:if>
+									<b:if cond='data:title'><h1><data:title/></h1></b:if>
 									<div class='widget-content popular-posts'>
 										<ul>
 											<b:loop values='data:posts' var='post'>

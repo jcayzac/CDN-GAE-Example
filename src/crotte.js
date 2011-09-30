@@ -98,18 +98,19 @@
 			c = 'complete',
 			x,
 			toplevel = false,
-			sc = function () {
-				if (domIsReady) {
-					return undefined;
-				}
-				try {
-					document.documentElement.doScroll("left");
-				} catch (e) {
-					window.setTimeout(sc, 1);
-					return undefined;
-				}
-				fn();
-			};
+			sc;
+		sc = function () {
+			if (domIsReady) {
+				return undefined;
+			}
+			try {
+				document.documentElement.doScroll("left");
+			} catch (e) {
+				window.setTimeout(sc, 1);
+				return undefined;
+			}
+			fn();
+		};
 		if (document.readyState === c) {
 			window.setTimeout(fn, 1);
 		} else if (document.addEventListener) {
@@ -213,5 +214,4 @@
 			}
 		}
 	}));
-
 }());

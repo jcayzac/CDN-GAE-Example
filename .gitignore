@@ -3,7 +3,6 @@
 *.pyc
 *~
 .DS_Store
-*.min.css
-*.min.js
-*.min.png
+*.compiled.css
+/files/
 
