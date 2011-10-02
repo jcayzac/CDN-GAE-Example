@@ -1,6 +1,6 @@
 /* Generated content */
 
-gist {
+div[data-crotte='gist'] {
     margin:1em;
     display:block;
 	font-size:12px;
@@ -17,14 +17,14 @@ gist {
     text-shadow:-1px 0 1px #000, 1px 0 1px #000, 0 -1px 1px #000, 0 1px 1px #000;
 }
 
-.loading gist:before {
+div[data-crotte='gist']:before {
     display:inline-block;
 	vertical-align:middle;
     content:'This content is fetched dynamically from the web: you need to activate Javascript to display it.';
 }
 
-.js gist { background-color:#ccc; }
-.js gist:before {
+.js div[data-crotte='gist'] { background-color:#ccc; }
+.js div[data-crotte='gist']:before {
 	background-color:#ccc;
     content:'Loading… '
 }
@@ -59,7 +59,7 @@ gist {
 }
 
 .gist .gist-file .gist-raw-link:before {
-	content:'This will open the file « ' attr(data-filename) ' » in a new window';
+	content:'Open « ' attr(data-filename) ' » in a new window';
 	display:block;
 	position:absolute;
 	bottom:-34px;
@@ -67,8 +67,8 @@ gist {
 	font-weight:bold;
 	right:9999px;
 	white-space:nowrap;
-	background-color:#000;
-	color:#fff;
+	background-color:#222;
+	color:#ddd;
 	padding:6px 10px;
 	opacity:0.0;
 	z-index:100;
@@ -78,6 +78,14 @@ gist {
 	-moz-transition:opacity .2s ease-in-out;
 	-o-transition:opacity .2s ease-in-out;
 	transition:opacity .2s ease-in-out;
+	-webkit-box-shadow: 1px 1px 6px #333;
+	box-shadow: 1px 1px 6px #333;
+}
+
+.gist .gist-file .gist-raw-link.dragout:before {
+	bottom:-48px;
+	content:'Open « ' attr(data-filename) ' » in a new window.\aYou can also drag it to your desktop to download it.';
+	white-space:pre;
 }
 
 .gist .gist-file .gist-raw-link:hover:before {

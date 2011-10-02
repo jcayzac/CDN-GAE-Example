@@ -103,6 +103,23 @@ em {
 	font-style: italic;
 }
 
+i:lang(ja),
+em:lang(ja) {
+	font-weight: normal;
+	font-style: inherit;
+    text-emphasis: filled circle;
+	-webkit-text-emphasis: filled circle;
+	-moz-text-emphasis: filled circle;
+	-ms-text-emphasis: filled circle;
+	-o-text-emphasis: filled circle;
+	text-emphasis-position: above right;
+	-webkit-text-emphasis-position: above right;
+	-moz-text-emphasis-position: above right;
+	-ms-text-emphasis-position: above right;
+	-o-text-emphasis-position: above right;
+}
+
+
 p {
 	text-align: justify;
 }

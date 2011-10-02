@@ -1,5 +1,12 @@
+@import "dimensions";
+
 body {
+	min-width: $full-width;
 	max-width:100%;
+}
+
+#header {
+    margin:0 $gap;
 }
 
 body,
@@ -10,6 +17,7 @@ body,
 }
 
 #main {
+	width: $full-width;
 	margin: 0 auto;
 }
 
@@ -41,16 +49,24 @@ body,
 }
 
 #colright {
+	left: $sidebar-width + $gap + $gap;
 	width: 200%;
 }
 
 #col1wrap {
+	right: $sidebar-width + $gap + $gap;
 	float: right;
 	width: 50%;
 }
 
 #col1 {
+	margin-left: $sidebar-width + $gap + $gap;
 	right: 100%;
+}
+
+#col2{
+	width: $sidebar-width;
+	right: $sidebar-width + $gap;
 }
 
 #footer {

@@ -1,0 +1,283 @@
+@import "colorscheme";
+@import "fonts";
+
+body {
+	color: $text-color;
+	background-color: $background-color;
+	font-family: $sans-families;
+}
+
+/* LINKS */
+a:link,
+a:visited {
+	color: $link-color;
+	font-weight: bold;
+}
+
+a:hover {
+	text-decoration:underline;
+	color: $link-hover-color;
+}
+
+/* HEADER */
+#header {
+    padding-bottom:24px;
+}
+#header h1 {
+    font-size: 60px;
+    font-weight: bold;
+    text-shadow:rgba(0, 0, 0, .1) 0 .08em .06em, rgba(0, 0, 0, .1) 0 0 .0625em, rgba(0, 0, 0, .3) 0 1px .05em, rgba(0, 0, 0, .2) 0 .05em .0625em, rgba(0, 0, 0, 0.25) 0 .0625em .0625em, rgba(0, 0, 0, 0.2) 0 .125em .125em, rgba(0, 0, 0, 0.15) 0 .25em .25em;
+}
+
+#header h1 a:link,
+#header h1 a:visited,
+#header h1 a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+#header p {
+    font-size: 24px;
+}
+
+/* SIDEBAR */
+aside h1 {
+    border-bottom:1px solid #000;
+    font-size: $base-font-size;
+    font-weight: bolder;
+    font-family: 'ITC Franklin Condensed', Helvetica, arial, 'Trebuchet MS', Trebuchet, sans-serif;
+    text-transform: uppercase;
+}
+
+aside .PageList .widget-content ul {
+    margin:10px 0;
+    padding:0;
+}
+
+aside .PageList .widget-content li {
+    display:block;
+    margin-bottom:3px;
+}
+
+aside .PageList .widget-content a {
+    display: block;
+    padding: 10px 10px 10px 25px;
+    border: 1px solid transparent;
+    color: #111;
+    font-size: $base-font-size;
+    text-decoration: none;
+    background-clip: padding-box;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    background-color: #e8e8e8;
+    -webkit-transition: border-color .2s ease-in-out, box-shadow .2s ease-in-out;
+    -moz-transition: border-color .2s ease-in-out, box-shadow .2s ease-in-out;
+    transition: border-color .2s ease-in-out, box-shadow .2s ease-in-out;
+}
+aside .PageList .widget-content a:hover,
+aside .PageList .widget-content li.selected a,
+aside .PageList .widget-content a:focus
+{
+    outline:0;
+    background-color:#fff;
+    border-color:#000;
+    box-shadow:0px 1px 6px #333;
+}
+
+aside .PageList .widget-content li.selected a {
+    color: #fff;
+    border-color: #111;
+    background-color: #333;
+    text-shadow: 0 0 3px #fff;
+}
+
+/* TAGCLOUD */
+nav.tag-cloud ul {
+    list-style-type: none;
+    position: relative;
+    list-style-position: inside;
+    margin:0;
+    padding:0;
+}
+
+nav.tag-cloud li {
+    display: inline-block;
+    margin: 3px 3px 2px 0px;
+}
+
+nav.tag-cloud a {
+    padding:3px 6px;
+    border-radius: 4px;
+}
+
+nav.tag-cloud a {
+    padding:3px 6px;
+    border-radius: 4px;
+}
+
+nav.tag-cloud a:link,
+nav.tag-cloud a:visited {
+    color: #ccc;
+    background-color: #666;
+    box-shadow:0px 1px 3px #666;
+}
+nav.tag-cloud a:hover {
+    color: #fff;
+    text-decoration:none;
+    background-color: #333;
+    text-shadow: 0 0 2px #666;
+    box-shadow:0px 1px 3px #333;
+}
+
+nav.tag-cloud li[data-size='1'] {
+    font-size:80%;
+    opacity:.8
+}
+nav.tag-cloud li[data-size='2'] {
+    font-size:90%;
+    opacity:.9;
+}
+nav.tag-cloud li[data-size='3'] {
+    font-size:100%;
+}
+nav.tag-cloud li[data-size='4'] {
+    font-size:120%;
+}
+nav.tag-cloud li[data-size='5'] {
+    font-size:160%;
+}
+nav.tag-cloud {
+    text-align:justify;
+}
+
+/* LABELS */
+nav.post-labels {
+    margin: 5px 0px;
+    text-align: justify;
+}
+
+nav.post-labels ul {
+    list-style-type: none;
+    position: relative;
+    list-style-position: inside;
+    font-size: 12px;
+    margin:0;
+    padding:0;
+}
+
+nav.post-labels ul:before {
+    color:#666;
+    content: 'Filled under: ';
+    font-weight: bold;
+    margin-right: 3px;
+    margin-top: 3px;
+    padding:3px 6px 3px 0;
+}
+
+nav.post-labels li {
+    display:inline-block;
+    margin-right: 3px;
+    margin-top: 3px;
+}
+
+nav.post-labels a {
+    padding:3px 6px;
+    border-radius: 4px;
+}
+nav.post-labels a:before {
+    content: '☗';
+    margin-right:6px;
+}
+nav.post-labels a:link,
+nav.post-labels a:visited {
+    color: #ccc;
+    background-color: #666;
+    box-shadow:0px 1px 3px #666;
+}
+nav.post-labels a:hover {
+    color: #fff;
+    text-decoration:none;
+    background-color: #333;
+    text-shadow: 0 0 2px #666;
+    box-shadow:0px 1px 3px #333;
+}
+
+/* ARTICLES */
+article > header h1 {
+    margin:20px 0px;
+    font-size:24px;
+    font-weight:bolder;
+}
+article > section h1 {
+    border-bottom:1px solid #000;
+    font-size: $base-font-size;
+    font-weight: bolder;
+    font-family: 'ITC Franklin Condensed', Helvetica, arial, 'Trebuchet MS', Trebuchet, sans-serif;
+    text-transform: uppercase;
+    margin-top:$base-font-size;
+}
+article > section p {
+    margin:0.5em 0;
+}
+article > footer .post-author .fn:before {
+    content: 'Posted by ';
+}
+
+article > footer .post-footer-line-1 {
+    font-weight:bolder;
+}
+
+article > footer a.post-comment-link:before {content:attr(data-comment-count) ' comments'}
+article > footer a.post-comment-link[data-comment-count='1']:before {content:'1 comment'}
+article > footer a.post-comment-link[data-comment-count='0']:before {content:'Be the first to leave a comment'}
+article > footer section.post-share-buttons > div {
+    display:inline-block;
+    vertical-align:top;
+}
+
+
+/* COMMENT SECTION: PROPER COMMENT COUNT */
+article > footer h1.comments-prefix:before {content:attr(data-comment-count) ' comments'}
+article > footer h1.comments-prefix[data-comment-count='1']:after {content:'1 comment'}
+article > footer h1.comments-prefix[data-comment-count='0'] {display:none;}
+article > footer iframe.blogger-comment-from-post {
+    width:100%;
+}
+
+article > footer #comment-post-message,
+article > footer h1.comments-prefix {
+    display: block;
+    font-size: 24px;
+    font-weight: bolder;
+    border-bottom: 2px solid $text-color;
+    margin-bottom:10px;
+}
+
+article > footer #comment-form {
+    width: 100%;
+    max-width: 100%;
+}
+
+.post-outer {
+    margin-bottom:32px;
+}
+
+/* NEW DATE */
+section.new-date > h1 span {
+    display:inline-block;
+    margin-top:3px;
+    padding:5px 16px;
+    color: #fff;
+    background-color: #333;
+    text-shadow: 0 0 3px #fff;
+    box-shadow:0px 1px 6px #333;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+section.new-date > h1 {
+    box-shadow: 0 7px 6px -6px #333;
+}
+.ie8 section.new-date > h1 {
+    border-bottom:1px solid #333;
+}
+
+.shadowy {text-shadow:rgba(0, 0, 0, .1) 0 .08em .06em, rgba(0, 0, 0, .1) 0 0 .0625em, rgba(0, 0, 0, .3) 0 1px .05em, rgba(0, 0, 0, .2) 0 .05em .0625em, rgba(0, 0, 0, 0.25) 0 .0625em .0625em, rgba(0, 0, 0, 0.2) 0 .125em .125em, rgba(0, 0, 0, 0.15) 0 .25em .25em}
