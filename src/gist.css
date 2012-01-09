@@ -62,7 +62,7 @@ div[data-crotte='gist']:before {
 	content:'Open « ' attr(data-filename) ' » in a new window';
 	display:block;
 	position:absolute;
-	bottom:-34px;
+	bottom:-38px;
 	font-size:12px;
 	font-weight:bold;
 	right:9999px;
@@ -80,10 +80,11 @@ div[data-crotte='gist']:before {
 	transition:opacity .2s ease-in-out;
 	-webkit-box-shadow: 1px 1px 6px #333;
 	box-shadow: 1px 1px 6px #333;
+	line-height:16px;
 }
 
 .gist .gist-file .gist-raw-link.dragout:before {
-	bottom:-48px;
+	bottom:-56px;
 	content:'Open « ' attr(data-filename) ' » in a new window.\aYou can also drag it to your desktop to download it.';
 	white-space:pre;
 }

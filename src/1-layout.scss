@@ -6,7 +6,8 @@ body {
 }
 
 #header {
-    margin:0 $gap;
+    margin:0 auto;
+    width: $full-width;
 }
 
 body,
@@ -16,9 +17,13 @@ body,
 	width: 100%;
 }
 
-#main {
+body #main {
 	width: $full-width;
 	margin: 0 auto;
+}
+
+body.mobile #main {
+    width: auto;
 }
 
 #header,
@@ -28,7 +33,6 @@ body,
 }
 
 #header,
-#content,
 #colright,
 #col2,
 #footer {
@@ -49,18 +53,18 @@ body,
 }
 
 #colright {
-	left: $sidebar-width + $gap + $gap;
+	left: $sidebar-width + $gap;
 	width: 200%;
 }
 
 #col1wrap {
-	right: $sidebar-width + $gap + $gap;
+	right: $sidebar-width + $gap;
 	float: right;
 	width: 50%;
 }
 
 #col1 {
-	margin-left: $sidebar-width + $gap + $gap;
+	margin-left: $sidebar-width + $gap;
 	right: 100%;
 }
 
@@ -71,4 +75,12 @@ body,
 
 #footer {
 	text-align: center;
+}
+
+#col2 > div {
+    margin: 0 !important;
+}
+
+#main-content {
+    margin: 0 5px !important;
 }

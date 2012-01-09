@@ -1,4 +1,12 @@
 #navbar-iframe,
-body .navbar {
-    display:none !important
+#Navbar1.widget.Navbar
+{
+    position:absolute !important;
+    top:-100px !important;
+    display:none !important;
+}
+
+footer div#Attribution1 {
+    position:absolute !important;
+    display:none !important;
 }

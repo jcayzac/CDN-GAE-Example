@@ -22,7 +22,7 @@
 		</b:if>
 		<b:include data='blog' name='all-head-content'/>
 		<title><data:blog.pageTitle/></title>
-		<!--[if IE 8]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+		<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 		<b:skin/>
 		<b:template-skin/>
 		<link rel='stylesheet' type='text/css' href='//cdn-jcayzac.appspot.com/files/combined.min.css' id='crottecss'></link>
@@ -154,6 +154,9 @@ This website uses technologies that require a more recent version of Internet Ex
 													<b:if cond='data:post.location'>
 														<div class='post-footer-line post-footer-line-3 post-location'>
 															<a expr:href='data:post.location.mapsUrl' target='_blank'><data:post.location.name/></a>
+															<data:post.location.latitude />
+															<!-- http://maps.google.com/maps?q=Yokohama,+Kanagawa+Prefecture,+Japan@35.4437078,139.6380256&z=10 -->
+															<!-- http://maps.google.com/maps/api/staticmap?size=128x128&maptype=roadmap&sensor=false&markers=color:red|35.4437078,139.6380256&zoom=6 -->
 														</div>
 													</b:if>
 												</b:if>
