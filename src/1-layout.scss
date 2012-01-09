@@ -84,3 +84,24 @@ body.mobile #main {
 #main-content {
     margin: 0 5px !important;
 }
+
+/* mobile layout */
+body.mobile {
+	min-width: $mobile-width;
+	max-width: $mobile-width;
+	width: $mobile-width;
+	margin:0 auto;
+}
+body.mobile #header,
+body.mobile #main,
+body.mobile #colright,
+body.mobile #col1,
+body.mobile #col2,
+body.mobile #footer,
+body.mobile #col1wrap {
+	float: none;
+	left:0;
+	right:0;
+	width: 100%;
+	margin-left: 0;
+}

@@ -322,3 +322,21 @@ body.mobile h2.date-header {
 /* pre .tab { margin-right: 40px; } */
 pre .tab:before { content:'    '; }
 .nocss { display: none; }
+
+/* social icons */
+.social-icon {
+	display:inline-block;
+	width:32px;
+	height:32px;
+	margin:2px;
+	overflow:hidden;
+	background-repeat:no-repeat;
+	background-image:url(social.png);
+	color:transparent !important;
+	vertical-align:middle;
+}
+.social-icon.facebook {background-position: -2px -2px}
+.social-icon.googleplus {background-position: -36px -2px}
+.social-icon.linkedin {background-position: -70px -2px}
+.social-icon.twitter {background-position: -2px -36px}
+.social-icon.youtube {background-position: -36px -36px}

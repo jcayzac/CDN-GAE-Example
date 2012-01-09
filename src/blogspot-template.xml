@@ -16,7 +16,7 @@
 		<meta content='noarchive,noodp,noimageindex' name='robots'/>
 		<meta content='IE=edge' http-equiv='X-UA-Compatible'/>
 		<b:if cond='data:blog.isMobile'>
-			<meta content='width=1280,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0' name='viewport'/>
+			<meta content='width=480' name='viewport'/>
 		<b:else/>
 			<meta content='width=1280' name='viewport'/>
 		</b:if>
@@ -29,7 +29,7 @@
 	</head>
 <!--[if IE 8]><body class="ie ie8"><![endif]-->
 <!--[if gt IE 8]><body class="ie"><![endif]-->
-<!--[if !IE]><!--><body class="no-ie"><!--<![endif]-->
+<!--[if !IE]><!--><body expr:class='&quot;no-ie&quot; + data:blog.mobileClass'><!--<![endif]-->
 <!--[if lt IE 8]>
 <iframe width="1" height="1" src="https://www.update.microsoft.com/microsoftupdate/" frameborder="0" scrolling="no" style="position: absolute; top:0; left:0;"></iframe>
 <div style="font-family:sans-serif;z-index:9999;position:fixed;top:0;left:0;right:0;margin:0;border-bottom:2px solid #000;padding:4px;font-size:1.2em; font-weight:bolder;color:#fff;background-color:#c44;text-align:center;">
@@ -378,7 +378,7 @@ This website uses technologies that require a more recent version of Internet Ex
 							</b:widget>
 
 
-							<b:widget id='Label1' locked='false' title='Tags' type='Label'>
+							<b:widget id='Label1' locked='false' title='Tags' type='Label' mobile='yes'>
 								<b:includable id='main'>
 									<nav class='tag-cloud'>
 							  		<b:if cond='data:title'><h1><data:title/></h1></b:if>
@@ -399,7 +399,7 @@ This website uses technologies that require a more recent version of Internet Ex
 							</b:widget>
 
 
-							<b:widget id='BlogArchive1' locked='false' title='Blog Archive' type='BlogArchive'>
+							<b:widget id='BlogArchive1' locked='false' title='Blog Archive' type='BlogArchive' mobile='yes'>
 								<b:includable id='main'>
 									<b:if cond='data:title'>
 										<h1><data:title/></h1>
@@ -484,7 +484,7 @@ This website uses technologies that require a more recent version of Internet Ex
 							</b:widget>
 
 
-							<b:widget id='HTML1' locked='false' title='Follow Me' type='HTML'>
+							<b:widget id='HTML1' locked='false' title='Follow Me' type='HTML' mobile='yes'>
 								<b:includable id='main'>
 									<section>
 										<b:if cond='data:title'><h1><data:title/></h1></b:if>
@@ -495,7 +495,7 @@ This website uses technologies that require a more recent version of Internet Ex
 							</b:widget>
 
 
-							<b:widget id='PopularPosts1' locked='false' title='Popular Posts' type='PopularPosts'>
+							<b:widget id='PopularPosts1' locked='false' title='Popular Posts' type='PopularPosts' mobile='yes'>
 								<b:includable id='main'>
 									<b:if cond='data:title'><h1><data:title/></h1></b:if>
 									<div class='widget-content popular-posts'>
